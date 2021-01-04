@@ -12,6 +12,7 @@
 * Before running our DOD algorithm, build an MRPG.
 * Parameter configuration can be done via txt files in `parameter` directory.
 * Data files have to be at `dataset` directory.
+   * You can implement data input as you like manner at input_data() function in data.hpp.
 
 ### MRPG
 * Compile: `g++ -O3 -o mrpg.out main.cpp -std=c++11 -fopenmp -Wall`.
