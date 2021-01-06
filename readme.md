@@ -14,9 +14,10 @@
 * Data files have to be at `dataset` directory.
    * You can implement data input as you like manner at input_data() function in data.hpp.
    * Now dataset directory contains a dummy file only.
-* This algorithm outputs an MRPG, and its file direcotry can be arbitrary, see `file_io.hpp`.
+
 
 ### MRPG
+* Create `result/graph` directory.
 * Compile: `g++ -O3 -o mrpg.out main.cpp -std=c++11 -fopenmp -Wall`.
 * Run: `./mrpg.out`.
 
