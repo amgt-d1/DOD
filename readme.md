@@ -33,5 +33,5 @@
 
 
 ## License
-Copyright (c) 2020 Daichi Amagata
+Copyright (c) 2020 Daichi Amagata  
 This software is released under the MIT license.
