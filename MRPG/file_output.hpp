@@ -18,8 +18,6 @@ double cpu_remove = 0;
 // result output
 void output_result() {
 
-	std::string prefix = "../../experiment/";
-
 	std::string f_name = "result/graph-construct_time_data-id(" + std::to_string(dataset_id) + ")_degree(" + std::to_string(degree) + ")_thread_no(" + std::to_string(core_no) + ").csv";
 	std::ofstream file;
 	file.open(f_name.c_str(), std::ios::out | std::ios::app);
