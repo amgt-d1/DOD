@@ -3,16 +3,17 @@
 * Our algorithm supports metric space.
     * Our codes implement L2 (Euclidean distance), L1 (Manhattan distance), Jaccard distance, Edit distance, angular distance, and L4 distance by default.
     * The other distance functions are free to add.
+* The details about our algorithm can be seen from our SIGMOD2021 paper, Fast and Exact Outlier Detection in Metric Spaces: A Proximity Graph-based Approach.
 
 ## Requirement
 * Linux OS (Ubuntu).
-* `g++ 7.5.0` and `Openmp`.
+* `g++ 7.5.0` (or higher version) and `Openmp`.
 
 ## How to use
 * Before running our DOD algorithm, build an MRPG.
 * Parameter configuration can be done via txt files in `parameter` directory.
 * Data files have to be at `dataset` directory.
-   * You can implement data input as you like manner at input_data() function in data.hpp.
+   * You can implement data input in as you like manner at input_data() function in data.hpp.
    * Now dataset directory contains a dummy file only.
 
 
@@ -30,7 +31,16 @@
 
 
 ## Citation
-
+If you use our implementation, please cite the following paper.
+``` 
+@inproceedings{amagata2021dod,  
+    title={Fast and Exact Outlier Detection in Metric Spaces: A Proximity Graph-based Approach},  
+    author={Amagata, Daichi and Onizuka, Makoto and Hara, Takahiro},  
+    booktitle={SIGMOD},  
+    pages={xxx--xxx},  
+    year={2021}  
+}
+``` 
 
 ## License
 Copyright (c) 2020 Daichi Amagata  
