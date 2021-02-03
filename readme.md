@@ -7,6 +7,7 @@
 
 ## Requirement
 * Linux OS (Ubuntu).
+   * The others have not been tested.
 * `g++ 7.5.0` (or higher version) and `Openmp`.
 
 ## How to use
