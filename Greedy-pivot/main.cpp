@@ -118,10 +118,7 @@ void detect_outlier_approximate() {
 				// approximate counting
 				const unsigned int count = greedy_counting(i);
 
-				if (count < k) {
-					dataset[i].flag = 0;
-					outlier_count_approx = outlier_count_approx + 1;
-				}
+				if (count < k) dataset[i].flag = 0;
 			}
 			else {
 
