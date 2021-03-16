@@ -7,7 +7,6 @@
 std::chrono::system_clock::time_point start, end;
 
 // result
-double outlier_count_approx = 0;	// approximate #outliers
 double outlier_count = 0;			// #outliers
 double false_positive_count = 0;
 double cpu_approximate = 0;
@@ -57,8 +56,6 @@ void output_result() {
 	"filtering time [millisec]" << "," << 
 	"verification time [millisec]" << "," << 
 	"total time [millisec]" << "," << 
-	"approx. #outliers" << "," << 
-	"approx. outlier rate" << "," << 
 	"#outliers" << "," << 
 	"outlier rate" << "," <<
 	"false positives" << "," <<
@@ -70,8 +67,6 @@ void output_result() {
 	cpu_approximate << "," <<
 	cpu_exact << "," <<
 	cpu_approximate + cpu_exact << "," <<
-	outlier_count_approx << "," <<
-	(outlier_count_approx / dataset.size()) * 100 << "," <<
 	outlier_count << "," <<
 	(outlier_count / dataset.size()) * 100 << "," <<
 	false_positive_count << "," <<
