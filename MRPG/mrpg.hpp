@@ -228,7 +228,7 @@ void evaluate_knn_exact() {
 
                     if (j != id) {
 
-                        distance = compute_distance(dataset[id], dataset[j], dataset[id].threshold);
+                        distance = compute_distance(dataset[id], dataset[j]);
                         dataset[id].update_neighbor_list_(distance, j);
                     }
                 }
