@@ -370,7 +370,10 @@ float compute_distance(const data& d1, const data& d2, const float &threshold) {
 	if (type == 0) {
 
 		// L2 norm
-		for (unsigned int i = 0; i < dimensionality; ++i) distance += powf(d1.pt[i] - d2.pt[i], 2.0);
+		for (unsigned int i = 0; i < dimensionality; ++i) {
+			const float temp = d1.pt[i] - d2.pt[i];
+			distance += temp * temp;
+		}
 		distance = sqrt(distance);
 	}
 	else if (type == 1) {
