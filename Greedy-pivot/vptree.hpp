@@ -15,7 +15,10 @@ float compute_distance(const data& d1, const data& d2) {
 	if (type == 0) {
 
 		// L2 norm
-		for (unsigned int i = 0; i < dimensionality; ++i) distance += powf(d1.pt[i] - d2.pt[i], 2.0);
+		for (unsigned int i = 0; i < dimensionality; ++i) {
+			const float temp = d1.pt[i] - d2.pt[i];
+			distance += temp * temp;
+		}
 		distance = sqrt(distance);
 	}
 	else if (type == 1) {
@@ -98,7 +101,10 @@ float compute_distance(const data& d1, const data& d2) {
 	else if (type == 5) {
 
 		// L4 norm
-		for (unsigned int i = 0; i < dimensionality; ++i) distance += powf(d1.pt[i] - d2.pt[i], 4.0);
+		for (unsigned int i = 0; i < dimensionality; ++i) {
+			const float temp = d1.pt[i] - d2.pt[i];
+			distance += temp * temp * temp * temp;
+		}
 		distance = powf(distance, 0.25);
 	}
 
@@ -112,7 +118,10 @@ float compute_distance(const data& d1, const data& d2, const float &threshold) {
 	if (type == 0) {
 
 		// L2 norm
-		for (unsigned int i = 0; i < dimensionality; ++i) distance += powf(d1.pt[i] - d2.pt[i], 2.0);
+		for (unsigned int i = 0; i < dimensionality; ++i) {
+			const float temp = d1.pt[i] - d2.pt[i];
+			distance += temp * temp;
+		}
 		distance = sqrt(distance);
 	}
 	else if (type == 1) {
@@ -196,10 +205,11 @@ float compute_distance(const data& d1, const data& d2, const float &threshold) {
 
 		// L4 norm
 		for (unsigned int i = 0; i < dimensionality; ++i) {
-			distance += powf(d1.pt[i] - d2.pt[i], 4.0);
-
+			const float temp = d1.pt[i] - d2.pt[i];
+			distance += temp * temp * temp * temp;
+			
 			if (i % 30 == 0) {
-				if (powf(threshold, 4.0) < distance) break;
+				if (threshold * threshold * threshold * threshold < distance) break;
 			}
 		}
 		distance = powf(distance, 0.25);
