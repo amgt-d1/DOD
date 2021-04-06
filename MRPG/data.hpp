@@ -459,10 +459,6 @@ float compute_distance(const data& d1, const data& d2, const float &threshold) {
 		for (unsigned int i = 0; i < dimensionality; ++i) {
 			const float temp = d1.pt[i] - d2.pt[i];
 			distance += temp * temp * temp * temp;
-			
-			if (i % 30 == 0) {
-				if (threshold * threshold * threshold * threshold < distance) break;
-			}
 		}
 		distance = powf(distance, 0.25);
 	}
