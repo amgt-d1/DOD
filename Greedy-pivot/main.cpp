@@ -156,13 +156,11 @@ void detect_outlier_exact(vp_tree &vpt, const unsigned int &mode) {
 				}
 				else {
 
-					float distance = 0;
-
 					// scan
 					for (unsigned int j = 0; j < dataset.size(); ++j) {
 
 						if (i != j) {
-							distance = compute_distance(dataset[i], dataset[j], radius);
+							const float distance = compute_distance(dataset[i], dataset[j]);
 							++dataset[i].distance_comp_count;
 							if (distance <= radius) ++count;
 							if (count == k) break;
