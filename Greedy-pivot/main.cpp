@@ -46,7 +46,7 @@ unsigned int greedy_counting(const unsigned int id) {
 			const unsigned int id_ = dataset[identifier].edges[i];
 
 			// increment visit
-			++dataset[id].visit_count;
+			//++dataset[id].visit_count;
 
 			// check visited
 			if (visited.find(id_) == visited.end()) {
@@ -56,7 +56,6 @@ unsigned int greedy_counting(const unsigned int id) {
 
 				// distance computation
 				dist = compute_distance(dataset[id], dataset[id_]);
-				++dataset[id].distance_comp_count;
 
 				// update queue
 				if (dist <= radius) {
@@ -84,17 +83,13 @@ unsigned int onehop_counting(const unsigned int id) {
 	// init count
 	unsigned int count = 0;
 
-	// prepare dist
-	float dist = 0;
-
 	for (unsigned int i = 0; i < dataset[id].edges.size(); ++i) {
 
 		// get id
 		const unsigned int id_ = dataset[id].edges[i];
 
 		// compute distance
-		dist = compute_distance(dataset[id], dataset[id_], radius);
-		++dataset[id].distance_comp_count;
+		const float dist = compute_distance(dataset[id], dataset[id_]);
 
 		if (dist <= radius) ++count;
 		if (count == k) break;
@@ -161,7 +156,6 @@ void detect_outlier_exact(vp_tree &vpt, const unsigned int &mode) {
 
 						if (i != j) {
 							const float distance = compute_distance(dataset[i], dataset[j]);
-							++dataset[i].distance_comp_count;
 							if (distance <= radius) ++count;
 							if (count == k) break;
 						}
