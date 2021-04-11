@@ -33,7 +33,7 @@ unsigned int greedy_counting(const unsigned int id) {
 	std::deque<std::pair<unsigned int, unsigned int>> queue;
 	queue.push_back({id, 0});
 
-	while(queue.size() > 0) {
+	while (queue.size() > 0) {
 
 		// pop the front
 		const unsigned int identifier = queue[0].first;
