@@ -38,7 +38,7 @@ If you use our implementation, please cite the following paper.
     title={Fast and Exact Outlier Detection in Metric Spaces: A Proximity Graph-based Approach},  
     author={Amagata, Daichi and Onizuka, Makoto and Hara, Takahiro},  
     booktitle={SIGMOD},  
-    pages={xxx--xxx},  
+    pages={36--48},  
     year={2021}  
 }
 ``` 
