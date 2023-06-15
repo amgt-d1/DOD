@@ -142,7 +142,7 @@ void nn_descent() {
                             accessed.insert(*it_nei);
 
                             // distance computation
-                            distance = compute_distance(dataset[i], dataset[*it_nei], dataset[i].threshold);
+                            distance = compute_distance(dataset[i], dataset[*it_nei]);
 
                             // kNN update
                             if (dataset[i].update_neighbor_list(distance, *it_nei)) {
