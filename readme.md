@@ -3,7 +3,7 @@
 * Our algorithm supports metric space.
     * Our codes implement L2 (Euclidean distance), L1 (Manhattan distance), Jaccard distance, Edit distance, angular distance, and L4 distance by default.
     * The other distance functions are free to add.
-* The details about our algorithm can be seen from our SIGMOD2021 paper, Fast and Exact Outlier Detection in Metric Spaces: A Proximity Graph-based Approach.
+* The details about our algorithm can be seen from our SIGMOD2021 paper, [Fast and Exact Outlier Detection in Metric Spaces: A Proximity Graph-based Approach](https://dl.acm.org/doi/10.1145/3448016.3452782).
 
 ## Requirement
 * Linux OS (Ubuntu).
