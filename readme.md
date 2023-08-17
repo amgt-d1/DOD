@@ -20,12 +20,12 @@
 
 ### MRPG
 * Create `result/graph` directory.
-* Compile: `g++ -O3 -o mrpg.out main.cpp -std=c++11 -fopenmp -Wall`.
+* Compile: `g++ -O3 -o mrpg.out main.cpp -std=c++11 -fopenmp`.
 * Run: `./mrpg.out`.
 
 ### Greedy-pivot (DOD algorithm)
 * Create `result` directory.
-* Compile: `g++ -O3 -o greedy-pivot.out main.cpp -std=c++11 -fopenmp -Wall`.
+* Compile: `g++ -O3 -o greedy-pivot.out main.cpp -std=c++11 -fopenmp`.
 * Run: `./greedy-pivot.out`.
 * If you test a low-dimensional dataset, you may enable VP-tree based verification (by setting `mode = 1` in main.cpp).
     * By default, verification is done by a linear scan.
